@@ -1,0 +1,1 @@
+In this project I will learn to work Redux and the ngRx library in angular
