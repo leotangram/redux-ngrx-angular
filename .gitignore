@@ -1,1 +1,46 @@
 01-redux-basic/node_modules
+
+# Redux App -----------------
+# compiled output
+02-redux-app/dist
+02-redux-app/tmp
+02-redux-app/out-tsc
+
+# dependencies
+02-redux-app/node_modules
+
+# profiling files
+02-redux-app/chrome-profiler-events.json
+02-redux-app/speed-measure-plugin.json
+
+# IDEs and editors
+02-redux-app/.idea
+02-redux-app/.project
+02-redux-app/.classpath
+02-redux-app/.c9/
+02-redux-app/*.launch
+02-redux-app/.settings/
+02-redux-app/*.sublime-workspace
+
+# IDE - VSCode
+02-redux-app/.vscode/*
+02-redux-app/!.vscode/settings.json
+02-redux-app/!.vscode/tasks.json
+02-redux-app/!.vscode/launch.json
+02-redux-app/!.vscode/extensions.json
+02-redux-app/.history/*
+
+# misc
+02-redux-app/.sass-cache
+02-redux-app/connect.lock
+02-redux-app/coverage
+02-redux-app/libpeerconnection.log
+02-redux-app/npm-debug.log
+02-redux-app/yarn-error.log
+02-redux-app/testem.log
+02-redux-app//typings
+
+# System Files
+02-redux-app/.DS_Store
+02-redux-app/Thumbs.db
+# End Redux App --------------------
