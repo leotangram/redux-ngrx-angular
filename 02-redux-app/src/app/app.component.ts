@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Store, Action } from '@ngrx/store';
+import { IncrementarAction, DecrementarAction } from './contador/contador-actions';
 
 interface AppState {
   contador: number
@@ -16,24 +17,18 @@ export class AppComponent {
   constructor(
     private store: Store<AppState>
   ) {
-    // this.contador = 10
     this.store.subscribe( state => {
       this.contador = state.contador
     })
   }
 
   incrementar() {
-    const accion: Action = {
-      type: 'INCREMENTAR'
-    }
-    // this.contador ++
+    const accion = new IncrementarAction()
     this.store.dispatch(accion)
   }
 
   decrementar() {
-    const accion: Action = {
-      type: 'DECREMENTAR'
-    }
+    const accion = new DecrementarAction()
     // this.contador ++
     this.store.dispatch(accion)
   }
