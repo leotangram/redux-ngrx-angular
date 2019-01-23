@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/app.reducers';
+import { MultiplicarAction, DividirAction } from '../contador.actions';
 
 @Component({
   selector: 'app-hijo',
@@ -24,18 +25,18 @@ export class HijoComponent implements OnInit {
   }
 
   multiplicar() {
-    this.contador *= 2
-    // this.cambioContador.emit(this.contador)
+    const accion = new MultiplicarAction(5)
+    this.store.dispatch(accion)
   }
 
   dividir() {
-    this.contador /= 2
-    // this.cambioContador.emit(this.contador)
+    const accion = new DividirAction(5)
+    this.store.dispatch(accion)
   }
 
-  resetNieto(nuevoContador) {
-    this.contador = nuevoContador
-    // this.cambioContador.emit(this.contador)
-  }
+  // resetNieto(nuevoContador) {
+  //   this.contador = nuevoContador
+  //   // this.cambioContador.emit(this.contador)
+  // }
 
 }
