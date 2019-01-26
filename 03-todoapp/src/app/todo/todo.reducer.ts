@@ -20,16 +20,29 @@ export function todoReducer(
       return [...state, todo]
 
     case fromTodo.TOGGLE_TODO:
-    return state.map(todoEdit => {
-      if (todoEdit.id === action.id) {
-        return {
-          ...todoEdit,
-          completado: !todoEdit.completado
+      return state.map(todoEdit => {
+        if (todoEdit.id === action.id) {
+          return {
+            ...todoEdit,
+            completado: !todoEdit.completado
+          }
+        } else {
+          return todoEdit
         }
-      } else {
-        return todoEdit
-      }
-    })
+      })
+
+    case fromTodo.EDITAR_TODO:
+      return state.map(todoEdit => {
+        if (todoEdit.id === action.id) {
+          return {
+            ...todoEdit,
+            texto: action.texto
+            // completado: !todoEdit.completado
+          }
+        } else {
+          return todoEdit
+        }
+      })
 
     default:
       return state
