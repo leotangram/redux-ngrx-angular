@@ -37,12 +37,14 @@ export function todoReducer(
           return {
             ...todoEdit,
             texto: action.texto
-            // completado: !todoEdit.completado
           }
         } else {
           return todoEdit
         }
       })
+
+    case fromTodo.BORRAR_TODO:
+      return state.filter(todoEdit => todoEdit.id !== action.id)
 
     default:
       return state
